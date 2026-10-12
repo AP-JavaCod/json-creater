@@ -1,4 +1,4 @@
-package ru.objectcat.jsonstruct.creater;
+package ru.objectcat.jsonstruct.creater.annotation;
 
 import static java.lang.annotation.ElementType.FIELD;
 import static java.lang.annotation.RetentionPolicy.RUNTIME;
@@ -9,5 +9,7 @@ import java.lang.annotation.Target;
 @Retention(RUNTIME)
 @Target(FIELD)
 public @interface FieldJSON {
+	
+	TypeFieldMethod method() default TypeFieldMethod.ALL;
 
 }
